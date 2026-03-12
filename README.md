@@ -74,19 +74,13 @@ pip install -r requirements.txt
 
 ## 5. Create the Ollama model
 
-1. Make sure the Ollama server is running:
-
-```bash
-ollama serve
-```
-
-2. In another terminal (still inside `minimal_app`), create the model:
+1. In a terminal , create the model:
 
 ```bash
 ollama create researchdraft -f Modelfile-lfm2
 ```
 
-This registers a local Ollama model named **`researchdraft-lfm2`**, which the
+This registers a local Ollama model named **`researchdraft`**, which the
 Gradio app will call.
 
 ---
@@ -130,18 +124,5 @@ Open that URL in your browser.
 
 ---
 
-## 8. Customization ideas
 
-- **Change the base model** in `Modelfile-lfm2` (e.g., a different LFM2.5
-  quantization or another GGUF model that works well for summarization).
-- **Adjust sampling parameters** (temperature, top‑p, repeat penalty) in
-  `Modelfile-lfm2` or in the `payload["options"]` inside
-  `interface/gradio_ollama.py`.
-- **Tweak the UI**:
-  - change the title/description text,
-  - alter the max token slider range,
-  - customize colors via Gradio’s themes if desired.
-
-This folder is intentionally small and self‑contained so you can push it as a
-GitHub repository and share an easy, reproducible abstract‑generation app.
 
